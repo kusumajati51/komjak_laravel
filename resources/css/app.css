@@ -1,0 +1,32 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+@layer base {
+    @font-face {
+        font-family: "Feltpen";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(../assets/fonts/FELTPEN_.TTF);
+    }
+    @font-face {
+        font-family: "Lenotype_FeltPen";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(../assets/fonts/Linotype_Feltpen.ttf);
+    }
+    @font-face {
+        font-family: "GeorgiaPro_Light";
+        src: url(../assets/fonts/GeorgiaPro_Light.ttf);
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
+}
