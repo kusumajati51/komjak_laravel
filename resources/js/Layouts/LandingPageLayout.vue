@@ -2,20 +2,10 @@
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <div class="bg-gray-100 dark:bg-gray-900 flex flex-1 items-center justify-center sm:items-stretch">
             <div class="flex flex-shrink-0 items-center">
-                <img class="h-20" src="../../assets/icons/icon_komjak.png" alt="Your Company" />
+                <img class="h-20" src="../../../resources/assets/icons/icon_komjak.png" alt="Your Company" />
             </div>
         </div>
-        <div class=" bg-gray-100 dark:bg-gray-900 flex flex-1 items-center justify-center sm:items-stretch">
-            <nav class="hidden md:flex space-x-4">
-                <a href="#" class="hover:text-red-500">BERANDA</a>
-                <a href="#" class="hover:text-red-500">TENTANG KOMJAK</a>
-                <a href="#" class="hover:text-red-500">PENDIRI</a>
-                <a href="#" class="hover:text-red-500">ANGKATAN</a>
-                <a href="#" class="hover:text-red-500">KEGIATAN</a>
-                <a href="#" class="hover:text-red-500">ARTIKEL</a>
-                <a href="#" class="hover:text-red-500">KONTAK</a>
-            </nav>
-        </div>
+
 
         <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -28,14 +18,13 @@
             <slot />
         </main>
 
-        <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <footer class="bg-zinc-800  shadow dark:bg-gray-900">
             <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <a href="https://flowbite.com/"
                         class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                        <img src="../../assets/icons/icon_komjak_white.png" class="h-8" alt="Flowbite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
                     </a>
                     <ul
                         class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -63,11 +52,16 @@
 </template>
 
 <script>
+import { initFlowbite } from 'flowbite'
+
 export default {
     data() {
         return {
             isMenuOpen: false,
         };
+    },
+    mounted() {
+        initFlowbite();
     },
     methods: {
         toggleMenu() {

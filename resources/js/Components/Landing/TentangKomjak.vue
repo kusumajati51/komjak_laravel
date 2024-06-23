@@ -22,13 +22,20 @@
                 <button class="bg-red-600 text-white py-2 px-4 rounded-lg">READ MORE</button>
             </div>
             <div class="relative">
-                <div class="absolute inset-0 bg-red-600"></div>
-                <div class="relative bg-zinc-800 h-64 w-64"></div>
+
+                <div class="absolute inset-0 bg-zinc-600 ">
+                    <!-- <img class="object-none h-full w-full" :src="sc_gen_kom"> -->
+                </div>
+                <div class="relative bg-zinc-800 h-64 w-64">
+                    <img class="object-fill h-full w-full" :src="sc_gen_kom">
+                </div>
             </div>
         </div>
     </div>
 
 </template>
 
-<script>
+<script setup>
+import sc_gen_kom from '../../../assets/profile/background/sc_gen_kom.jpg'
+
 </script>

@@ -9,9 +9,9 @@ export default {
         "./vendor/laravel/jetstream/**/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.vue",
-        "node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}",
-        "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
+        "./resources/js/**/*.{vue,js,ts,jsx,tsx}",
+        "./node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}",
+        "./node_modules/flowbite/**/*.{vue,js,ts,jsx,tsx}",
         "./vendor/awcodes/filament-curator/resources/**/*.blade.php",
     ],
 

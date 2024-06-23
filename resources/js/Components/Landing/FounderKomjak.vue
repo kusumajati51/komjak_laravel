@@ -39,7 +39,7 @@ export default {
                     ],
                 },
                 {
-                    name: 'Jhon Smith',
+                    name: ' Felix',
                     title: 'Best Boady Builder',
                     image: 'https://placehold.co/400x200',
                     socials: [
@@ -50,7 +50,7 @@ export default {
                     ],
                 },
                 {
-                    name: 'Kate Princes',
+                    name: 'Frans ',
                     title: 'Best Boady Builder',
                     image: 'https://placehold.co/400x200',
                     socials: [
@@ -61,7 +61,7 @@ export default {
                     ],
                 },
                 {
-                    name: 'V 1 mmB qx',
+                    name: 'Mike',
                     title: 'Best Boady Builder',
                     image: 'https://placehold.co/400x200',
                     socials: [
@@ -71,6 +71,7 @@ export default {
                         { name: 'Pinterest', icon: 'https://placehold.co/20x20', link: '#' },
                     ],
                 },
+                
             ]
         }
     },
