@@ -1,7 +1,7 @@
 ##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######—Deployment:
 Deployment:
   Tasks:
-    – export DEPLOYPATH=/home/komjakar/public_html/komjak_laravel
+    – export DEPLOYPATH=/home/komjakar/public_html/
     – /bin/cp -R .vscode $DEPLOYPATH
     – /bin/cp -R assets $DEPLOYPATH
     – /bin/cp -R css $DEPLOYPATH
