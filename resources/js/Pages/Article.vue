@@ -7,14 +7,20 @@
                         <img class="h-20" src="../../assets/icons/icon_komjak.png" alt="Your Company" />
                     </div>
                 </div>
-                
+
             </div>
         </template>
-        <div>
-            <article class="prose">
-                <h1 class="text-3xl font-bold">{{ itemPosts.title }}</h1>
-                <div class="mt-4" v-html="itemPosts.content"></div>
-            </article>
+        <div class="max-w-3xl mx-auto">
+            <img class="w-full" :src="itemPosts.image" :alt="itemPosts.alt" />
+            <small class="font-mono text-sm" v-if="itemPosts.caption">{{
+                itemPosts.caption
+                }}</small>
+            <h1 class="text-4xl font-bold text-black text-center dark:text-white mt-4 align-center">
+                {{ itemPosts.title }}
+            </h1>
+            <article
+                class="mt-4 prose prose-h2:text-gray-950 prose-strong:text-gray-950 text-gray-950 dark:text-grey-100"
+                v-html="itemPosts.content"></article>
         </div>
     </LandingPageLayout>
 
