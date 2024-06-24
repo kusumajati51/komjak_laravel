@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "framework": null,
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.6.0"
@@ -12,10 +13,10 @@
         }
     ],
     "env": {
-        "APP_NAME": "Laravel Vercel",
+        "APP_NAME": "KOmjak Vercel",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://komjak.vercel.app",
+        "APP_URL": "https://komjak-vercel.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
