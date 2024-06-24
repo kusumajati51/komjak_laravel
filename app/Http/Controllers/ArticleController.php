@@ -48,7 +48,7 @@ class ArticleController extends Controller
             ], 404);
         }
     }
-
+ 
     /**
      * Update the specified resource in storage.
      */

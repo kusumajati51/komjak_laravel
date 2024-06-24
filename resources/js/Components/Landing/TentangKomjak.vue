@@ -31,11 +31,13 @@
                 </div>
             </div>
         </div>
+        <HistoryKomjak/>
     </div>
 
 </template>
 
 <script setup>
 import sc_gen_kom from '../../../assets/profile/background/sc_gen_kom.jpg'
+import HistoryKomjak from './HistoryKomjak.vue';
 
 </script>

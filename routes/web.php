@@ -14,7 +14,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 Route::get('/', HomeController::class);
-
+Route::get('/article/{slug}',[HomeController::class, 'showWeb'])->name('article', ['slug' => 'slug']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

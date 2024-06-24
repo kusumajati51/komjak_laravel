@@ -11,10 +11,14 @@ import LandingPageLayout from '@/Layouts/LandingPageLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import HistoryKomjak from '@/Components/Landing/HistoryKomjak.vue';
 import AspekKomjak from '@/Components/Landing/AspekKomjak.vue';
+import { onMounted } from 'vue';
+import { initFlowbite, initTabs } from 'flowbite';
+import ListPostCard from '@/Components/Landing/ListPostCard.vue';
+import TabsComponent from '@/Components/TabsComponent.vue';
 
-
-defineProps({
-    posts: Array
+onMounted(() => {
+    initFlowbite();
+    initTabs();
 });
 
 
@@ -25,40 +29,43 @@ defineProps({
 
     </Head>
     <LandingPageLayout>
-        <div class=" bg-gray-100 dark:bg-gray-900 flex flex-1 items-center justify-center sm:items-stretch">
-            <nav class="hidden md:flex space-x-4">
-                <a href="#" class="hover:text-red-500">BERANDA</a>
-                <a href="#" class="hover:text-red-500">TENTANG KOMJAK</a>
-                <a href="#" class="hover:text-red-500">PENDIRI</a>
-                <a href="#" class="hover:text-red-500">ANGKATAN</a>
-                <a href="#" class="hover:text-red-500">KEGIATAN</a>
-                <a href="#" class="hover:text-red-500">ARTIKEL</a>
-                <a href="#" class="hover:text-red-500">KONTAK</a>
-            </nav>
-        </div>
-        <div>
-            <BerandaSegment />
-        </div>
-        <div>
-            <TentangKomjak />
-        </div>
+        
+        <TabsComponent :tabs="tabs">
+            <template #jumbotron>
+                <BerandaSegment />
+            </template>
+        </TabsComponent>
 
-        <div>
-            <HistoryKomjak />
-        </div>
 
-        <div>
-            <AspekKomjak/>
-        </div>
-        <!-- <div>
-            <MidSegment />
-        </div> -->
-        <div class="p-20 grid grid-cols-4 gap-3">
-            <PostCard v-for="post in posts " :key="post.slug" :post="post" />
-        </div>
     </LandingPageLayout>
 </template>
 
+<script>
+export default {
+    props: {
+        itemsPosts: Array
+    },
+    data() {
+        return {
+            tabs: [
+                { label: 'Tentang Komjak', component: TentangKomjak },
+                // { label: 'Sejarah Komjak', component: HistoryKomjak },
+                { label: 'Aspek Komjak', component: AspekKomjak },
+                {
+                    label: 'Berita Komjak',
+                    component: ListPostCard,
+                    props: {
+                        items: this.itemsPosts
+                    }
+                },
+
+            ],
+        }
+    }
+}
+</script>
 
 
-<style></style>
+<style>
+
+</style>

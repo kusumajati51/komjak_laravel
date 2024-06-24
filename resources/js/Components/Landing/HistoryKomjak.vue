@@ -16,7 +16,7 @@
                 <TimelineSegment :item="item" :isEven="index % 2 === 0" />
             </li>
         </ol>
-        <FounderKomjak />
+        <!-- <FounderKomjak /> -->
     </div>
 </template>
 

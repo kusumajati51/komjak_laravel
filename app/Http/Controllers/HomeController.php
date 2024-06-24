@@ -16,7 +16,16 @@ class HomeController extends Controller
     {
         $post = Post::all();
         return inertia()->render('Home', [
-            'posts' => PostResource::collection($post)
+            'itemsPosts' => PostResource::collection($post)
         ]);
     }
+
+    public function showWeb($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+        return inertia()->render('Article', [
+            'itemPosts' => new PostResource($post)
+        ]);
+    }
+
 }

@@ -1,17 +1,13 @@
 <template>
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <div class="bg-gray-100 dark:bg-gray-900 flex flex-1 items-center justify-center sm:items-stretch">
-            <div class="flex flex-shrink-0 items-center">
-                <img class="h-20" src="../../../resources/assets/icons/icon_komjak.png" alt="Your Company" />
-            </div>
-        </div>
-
-
         <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <slot name="header" />
             </div>
         </header>
+        <slot name="app-bar">
+            
+        </slot>
 
         <!-- Page Content -->
         <main>
@@ -52,7 +48,7 @@
 </template>
 
 <script>
-import { initFlowbite } from 'flowbite'
+import { initFlowbite, initTabs } from 'flowbite'
 
 export default {
     data() {
@@ -62,6 +58,7 @@ export default {
     },
     mounted() {
         initFlowbite();
+        initTabs();
     },
     methods: {
         toggleMenu() {
