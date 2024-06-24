@@ -1,6 +1,5 @@
-##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######—Deployment:
-Deployment:
-  Tasks:
+deployment:
+  tasks:
     – export DEPLOYPATH=/home/komjakar/public_html/
     – /bin/cp -R .vscode $DEPLOYPATH
     – /bin/cp -R assets $DEPLOYPATH
