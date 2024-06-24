@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/komjakar/public_html/
+    - export DEPLOYPATH=/home/komjakar/public_html/komjak_laravel/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
